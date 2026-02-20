@@ -2,12 +2,19 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>ShiftEduTech-Text To PDF Converter</title>
+<title>ShiftEduTech - Text To PDF Converter</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+	
+<meta name="theme-color" content="#0072ff">
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#0072ff">
-
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 
 <style>
@@ -29,7 +36,7 @@ body.dark{
 *{margin:0;padding:0;box-sizing:border-box;}
 
 body{
-    font-family:'Segoe UI',sans-serif;
+    font-family:'Inter',sans-serif;
     min-height:100vh;
     display:flex;
     flex-direction:column;
@@ -42,66 +49,50 @@ body{
     z-index:-1;
 }
 
-/* HERO HEADER */
 .hero-header {
-    width: 100%;
-    padding: 20px 30px;
-    background: var(--nav-bg);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255,255,255,0.08);
+    width:100%;
+    padding:20px 30px;
+    background:var(--nav-bg);
+    backdrop-filter:blur(12px);
 }
 
-.hero-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1100px;
-    margin: auto;
+.hero-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    max-width:1100px;
+    margin:auto;
 }
 
-.brand-section {
-    display: flex;
-    align-items: center;
-    gap: 18px;
+.brand-section{
+    display:flex;
+    align-items:center;
+    gap:18px;
 }
 
-.logo {
-    width: 65px;
-    height: auto;
-    object-fit: contain;
-    filter: drop-shadow(0 0 8px #00c6ff);
-    transition: 0.3s ease;
+.logo{
+    width:65px;
+    filter:drop-shadow(0 0 8px #00c6ff);
 }
 
-.logo:hover {
-    transform: scale(1.05);
+.brand-text h1{
+    font-size:20px;
+    font-weight:600;
 }
 
-.brand-text h1 {
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 2px;
+.brand-text p{
+    font-size:13px;
+    opacity:0.7;
 }
 
-.brand-text p {
-    font-size: 13px;
-    opacity: 0.7;
+.toggle-btn{
+    padding:6px 14px;
+    border-radius:20px;
+    border:none;
+    background:rgba(255,255,255,0.2);
+    cursor:pointer;
 }
 
-.toggle-btn {
-    padding: 6px 14px;
-    border-radius: 20px;
-    border: none;
-    background: rgba(255,255,255,0.2);
-    cursor: pointer;
-    transition: 0.2s ease;
-}
-
-.toggle-btn:hover {
-    background: rgba(255,255,255,0.35);
-}
-
-/* MAIN */
 .main{
     flex:1;
     display:flex;
@@ -140,9 +131,18 @@ textarea{height:180px;resize:none;}
     background:linear-gradient(to right,#00c6ff,#0072ff);
     color:#fff;
     cursor:pointer;
+    transition:0.3s;
 }
 
-/* FOOTER */
+.generate-btn:hover{
+    transform:scale(1.02);
+}
+
+.generate-btn:disabled{
+    opacity:0.6;
+    cursor:not-allowed;
+}
+
 .footer{
     text-align:center;
     padding:15px;
@@ -150,7 +150,13 @@ textarea{height:180px;resize:none;}
     font-size:13px;
 }
 
-/* PROGRESS */
+#wordCount{
+    text-align:right;
+    font-size:12px;
+    opacity:0.7;
+}
+
+/* Progress */
 #progressOverlay{
     display:none;
     position:fixed;
@@ -183,7 +189,7 @@ textarea{height:180px;resize:none;}
     color:#00f5ff;
 }
 
-/* PREVIEW */
+/* Preview */
 #previewModal{
     display:none;
     position:fixed;
@@ -218,6 +224,19 @@ textarea{height:180px;resize:none;}
 .edit-btn{background:#ffaa00;color:#000;}
 .close-btn{background:#ff4d4d;color:#fff;}
 
+/* Toast */
+#toast{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#00c6ff;
+    color:#fff;
+    padding:10px 18px;
+    border-radius:6px;
+    display:none;
+    z-index:2000;
+}
+
 </style>
 </head>
 
@@ -226,151 +245,166 @@ textarea{height:180px;resize:none;}
 <div id="tsparticles"></div>
 
 <header class="hero-header">
-    <div class="hero-container">
-
-        <div class="brand-section">
-            <img src="/images/shiftedutech-logo.png" alt="ShiftEduTech Logo" class="logo">
-
-            <div class="brand-text">
-                <h1>ShiftEduTech - Text To PDF Converter</h1>
-                <p>Build Documents. The Smarter Way.</p>
-            </div>
-        </div>
-
-        <button class="toggle-btn" onclick="toggleMode()">🌙</button>
-
-    </div>
+<div class="hero-container">
+<div class="brand-section">
+<img src="/images/shiftedutech-logo.png" class="logo">
+<div class="brand-text">
+<h1>ShiftEduTech - Text To PDF Converter</h1>
+<p>Build Documents. The Smarter Way.</p>
+</div>
+</div>
+<button class="toggle-btn" onclick="toggleMode()">🌙</button>
+</div>
 </header>
 
-
 <div class="main">
-    <div class="container">
-        <form id="pdfForm">
-            <input type="text" name="title" placeholder="Document Title" required>
-            <select name="fontSize">
-                <option value="12">Font Size 12</option>
-                <option value="14">Font Size 14</option>
-                <option value="16">Font Size 16</option>
-                <option value="18">Font Size 18</option>
-                <option value="20">Font Size 20</option>
-            </select>
-            <textarea name="content" placeholder="Type or paste your text..." required></textarea>
-            <button type="button" class="generate-btn" onclick="generatePDF()">⚡ Build & Preview ⚡</button>
-        </form>
-    </div>
+<div class="container">
+<form id="pdfForm">
+<input type="text" name="title" placeholder="Document Title" required>
+
+<select name="fontSize">
+<option value="12">Font Size 12</option>
+<option value="14">Font Size 14</option>
+<option value="16">Font Size 16</option>
+<option value="18">Font Size 18</option>
+<option value="20">Font Size 20</option>
+</select>
+
+<select name="pageSize">
+<option value="A4">A4</option>
+<option value="Letter">Letter</option>
+</select>
+
+<textarea name="content" placeholder="Type or paste your text..." required></textarea>
+<div id="wordCount">0 words</div>
+
+<button type="button" class="generate-btn" onclick="generatePDF()">⚡ Build & Preview ⚡</button>
+</form>
+</div>
 </div>
 
 <div class="footer">
-© 2026 ShiftEduTech | Version 3.2.1
+© 2026 ShiftEduTech | Version 4.0 Pro
 </div>
 
-<!-- PROGRESS -->
 <div id="progressOverlay">
-    <div class="progress-container">
-        <div class="progress-bar" id="progressBar"></div>
-    </div>
-    <div class="progress-text" id="progressText">0%</div>
+<div class="progress-container">
+<div class="progress-bar" id="progressBar"></div>
+</div>
+<div class="progress-text" id="progressText">0%</div>
 </div>
 
-<!-- PREVIEW -->
 <div id="previewModal">
-    <iframe id="pdfPreview"></iframe>
-    <div class="modal-actions">
-        <button class="download-btn" onclick="downloadPDF()">Download</button>
-        <button class="edit-btn" onclick="editDocument()">Edit</button>
-        <button class="close-btn" onclick="closePreview()">Close</button>
-    </div>
+<iframe id="pdfPreview"></iframe>
+<div class="modal-actions">
+<button class="download-btn" onclick="downloadPDF()">Download</button>
+<button class="edit-btn" onclick="editDocument()">Edit</button>
+<button class="close-btn" onclick="closePreview()">Close</button>
 </div>
+</div>
+
+<div id="toast">PDF Ready!</div>
 
 <script>
 
 let generatedBlob=null;
+const textarea=document.querySelector("textarea[name='content']");
+textarea.value=localStorage.getItem("draft")||"";
 
-function toggleMode(){
-    document.body.classList.toggle("dark");
-}
-
-tsParticles.load("tsparticles",{
-    background:{color:{value:"#141e30"}},
-    particles:{number:{value:40},size:{value:3},move:{speed:1}}
+textarea.addEventListener("input",()=>{
+localStorage.setItem("draft",textarea.value);
+const words=textarea.value.trim().split(/\s+/).filter(Boolean);
+document.getElementById("wordCount").innerText=words.length+" words";
 });
+
+function toggleMode(){document.body.classList.toggle("dark");}
+
+tsParticles.load("tsparticles",{background:{color:{value:"#141e30"}},particles:{number:{value:40},size:{value:3},move:{speed:1}}});
 
 async function generatePDF(){
 
-    const formData=new FormData(document.getElementById("pdfForm"));
-    const overlay=document.getElementById("progressOverlay");
-    const bar=document.getElementById("progressBar");
-    const text=document.getElementById("progressText");
+const btn=document.querySelector(".generate-btn");
+btn.disabled=true;
+btn.innerText="Generating...";
 
-    overlay.style.display="flex";
-    bar.style.width="0%";
-    text.innerText="0%";
+const formData=new FormData(document.getElementById("pdfForm"));
+const overlay=document.getElementById("progressOverlay");
+const bar=document.getElementById("progressBar");
+const text=document.getElementById("progressText");
 
-    let progress=0;
-    const interval=setInterval(()=>{
-        progress+=5;
-        if(progress<=90){
-            bar.style.width=progress+"%";
-            text.innerText=progress+"%";
-        }
-    },100);
+overlay.style.display="flex";
+bar.style.width="0%";
+text.innerText="0%";
 
-    try{
-        const response=await fetch("/generate",{method:"POST",body:formData});
-        if(!response.ok) throw new Error("Server error");
+let progress=0;
+const interval=setInterval(()=>{
+progress+=5;
+if(progress<=90){
+bar.style.width=progress+"%";
+text.innerText=progress+"%";
+}
+},100);
 
-        generatedBlob=await response.blob();
+try{
+const response=await fetch("/generate",{method:"POST",body:formData});
+if(!response.ok) throw new Error();
 
-        clearInterval(interval);
-        bar.style.width="100%";
-        text.innerText="100%";
+generatedBlob=await response.blob();
 
-        setTimeout(()=>{
-            overlay.style.display="none";
-            openPreview();
-        },500);
+clearInterval(interval);
+bar.style.width="100%";
+text.innerText="100%";
 
-    }catch(err){
-        clearInterval(interval);
-        overlay.style.display="none";
-        alert("PDF Generation Failed");
-    }
+setTimeout(()=>{
+overlay.style.display="none";
+openPreview();
+showToast("PDF Ready!");
+},500);
+
+}catch{
+overlay.style.display="none";
+showToast("⚠️ Unable to generate PDF");
+}
+
+btn.disabled=false;
+btn.innerText="⚡ Build & Preview ⚡";
 }
 
 function openPreview(){
-    const url=URL.createObjectURL(generatedBlob);
-    document.getElementById("pdfPreview").src=url;
-    document.getElementById("previewModal").style.display="flex";
+const url=URL.createObjectURL(generatedBlob);
+document.getElementById("pdfPreview").src=url;
+document.getElementById("previewModal").style.display="flex";
 }
 
-function closePreview(){
-    document.getElementById("previewModal").style.display="none";
-}
-
-function editDocument(){
-    closePreview();
-    document.querySelector("textarea[name='content']").focus();
-}
+function closePreview(){document.getElementById("previewModal").style.display="none";}
+function editDocument(){closePreview();textarea.focus();}
 
 function downloadPDF(){
-    let title=document.querySelector("input[name='title']").value.trim();
-    if(!title) title="document";
+let title=document.querySelector("input[name='title']").value.trim()||"document";
+title=title.replace(/[\\\/:*?"<>|]/g,"").replace(/\s+/g,"_").toLowerCase();
 
-    title=title.replace(/[\\\/:*?"<>|]/g,"")
-               .replace(/\s+/g,"_")
-               .toLowerCase();
+const now=new Date();
+const timestamp=now.getFullYear()+
+String(now.getMonth()+1).padStart(2,'0')+
+String(now.getDate()).padStart(2,'0')+"_"+
+String(now.getHours()).padStart(2,'0')+
+String(now.getMinutes()).padStart(2,'0');
 
-    const now=new Date();
-    const timestamp=now.getFullYear()+
-        String(now.getMonth()+1).padStart(2,'0')+
-        String(now.getDate()).padStart(2,'0')+"_"+
-        String(now.getHours()).padStart(2,'0')+
-        String(now.getMinutes()).padStart(2,'0');
+const a=document.createElement("a");
+a.href=URL.createObjectURL(generatedBlob);
+a.download=`${title}_set_${timestamp}.pdf`;
+a.click();
+}
 
-    const a=document.createElement("a");
-    a.href=URL.createObjectURL(generatedBlob);
-    a.download=`${title}_set_${timestamp}.pdf`;
-    a.click();
+function showToast(message){
+const toast=document.getElementById("toast");
+toast.innerText=message;
+toast.style.display="block";
+setTimeout(()=>toast.style.display="none",3000);
+}
+
+if('serviceWorker' in navigator){
+navigator.serviceWorker.register('/sw.js');
 }
 
 </script>
