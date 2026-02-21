@@ -2,310 +2,343 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>ShiftEduTech - Text To PDF Converter</title>
+
+<title>Free Online Text to PDF Converter – Fast & Secure | ShiftEduTech</title>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<!-- SEO Meta -->
+<meta name="description" content="Free online Text to PDF converter. Convert your text into professional PDF documents instantly. Fast, secure, and no watermark.">
+<meta name="keywords" content="text to pdf, convert text to pdf online, free pdf converter, online pdf tool">
+<meta name="author" content="ShiftEduTech">
 
-	
-<meta name="theme-color" content="#0072ff">
+<!-- Open Graph (STEP 3) -->
+<meta property="og:title" content="Free Online Text to PDF Converter – Fast & Secure">
+<meta property="og:description" content="Convert text into professional PDFs instantly. No watermark. 100% Free.">
+<meta property="og:type" content="website">
+
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#0072ff">
+
+<link rel="icon" href="/favicon.ico?v=2" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=2">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png?v=2">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2">
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 
+<meta name="theme-color" content="#0072ff">
+<link rel="manifest" href="/manifest.json">
+<link
+	href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+	rel="stylesheet">
+<script
+	src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+
 <style>
-:root{
-    --card-bg: rgba(255,255,255,0.12);
-    --text-color:#fff;
-    --input-bg:#fff;
-    --input-text:#000;
-    --nav-bg: rgba(255,255,255,0.08);
+:root {
+	--card-bg: rgba(255, 255, 255, 0.12);
+	--text-color: #fff;
+	--input-bg: #fff;
+	--input-text: #000;
+	--nav-bg: rgba(255, 255, 255, 0.08);
 }
 
-body.dark{
-    --card-bg: rgba(0,0,0,0.6);
-    --input-bg:#1f1f1f;
-    --input-text:#fff;
-    --nav-bg: rgba(0,0,0,0.7);
+body.dark {
+	--card-bg: rgba(0, 0, 0, 0.6);
+	--input-bg: #1f1f1f;
+	--input-text: #fff;
+	--nav-bg: rgba(0, 0, 0, 0.7);
 }
 
-*{margin:0;padding:0;box-sizing:border-box;}
-
-body{
-    font-family:'Inter',sans-serif;
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
-    color:var(--text-color);
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-#tsparticles{
-    position:fixed;
-    inset:0;
-    z-index:-1;
+body {
+	font-family: 'Inter', sans-serif;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	color: var(--text-color);
+}
+
+#tsparticles {
+	position: fixed;
+	inset: 0;
+	z-index: -1;
 }
 
 .hero-header {
-    width:100%;
-    padding:20px 30px;
-    background:var(--nav-bg);
-    backdrop-filter:blur(12px);
+	width: 100%;
+	padding: 20px 30px;
+	background: var(--nav-bg);
+	backdrop-filter: blur(12px);
 }
 
-.hero-container{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    max-width:1100px;
-    margin:auto;
+.hero-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1100px;
+	margin: auto;
 }
 
-.brand-section{
-    display:flex;
-    align-items:center;
-    gap:18px;
+.brand-section {
+	display: flex;
+	align-items: center;
+	gap: 18px;
 }
 
-.logo{
-    width:65px;
-    filter:drop-shadow(0 0 8px #00c6ff);
+.logo {
+	width: 65px;
+	filter: drop-shadow(0 0 8px #00c6ff);
 }
 
-.brand-text h1{
-    font-size:20px;
-    font-weight:600;
+.brand-text h1 {
+	font-size: 20px;
+	font-weight: 600;
 }
 
-.brand-text p{
-    font-size:13px;
-    opacity:0.7;
+.brand-text p {
+	font-size: 13px;
+	opacity: 0.7;
 }
 
-.toggle-btn{
-    padding:6px 14px;
-    border-radius:20px;
-    border:none;
-    background:rgba(255,255,255,0.2);
-    cursor:pointer;
+.toggle-btn {
+	padding: 6px 14px;
+	border-radius: 20px;
+	border: none;
+	background: rgba(255, 255, 255, 0.2);
+	cursor: pointer;
 }
 
-.main{
-    flex:1;
-    display:flex;
-    justify-content:center;
-    padding:40px 20px;
+.main {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	padding: 40px 20px;
 }
 
-.container{
-    width:100%;
-    max-width:700px;
-    background:var(--card-bg);
-    backdrop-filter:blur(20px);
-    padding:25px;
-    border-radius:15px;
+.container {
+	width: 100%;
+	max-width: 700px;
+	background: var(--card-bg);
+	backdrop-filter: blur(20px);
+	padding: 25px;
+	border-radius: 15px;
 }
 
-input,select,textarea{
-    width:100%;
-    padding:12px;
-    margin:10px 0;
-    border-radius:8px;
-    border:none;
-    outline:none;
-    background:var(--input-bg);
-    color:var(--input-text);
+input, select, textarea {
+	width: 100%;
+	padding: 12px;
+	margin: 10px 0;
+	border-radius: 8px;
+	border: none;
+	outline: none;
+	background: var(--input-bg);
+	color: var(--input-text);
 }
 
-textarea{height:180px;resize:none;}
-
-.generate-btn{
-    width:100%;
-    padding:12px;
-    margin-top:10px;
-    border:none;
-    border-radius:8px;
-    background:linear-gradient(to right,#00c6ff,#0072ff);
-    color:#fff;
-    cursor:pointer;
-    transition:0.3s;
+textarea {
+	height: 180px;
+	resize: none;
 }
 
-.generate-btn:hover{
-    transform:scale(1.02);
+.generate-btn {
+	width: 100%;
+	padding: 12px;
+	margin-top: 10px;
+	border: none;
+	border-radius: 8px;
+	background: linear-gradient(to right, #00c6ff, #0072ff);
+	color: #fff;
+	cursor: pointer;
+	transition: 0.3s;
 }
 
-.generate-btn:disabled{
-    opacity:0.6;
-    cursor:not-allowed;
+.generate-btn:hover {
+	transform: scale(1.02);
 }
 
-.footer{
-    text-align:center;
-    padding:15px;
-    background:var(--nav-bg);
-    font-size:13px;
+.generate-btn:disabled {
+	opacity: 0.6;
+	cursor: not-allowed;
 }
 
-#wordCount{
-    text-align:right;
-    font-size:12px;
-    opacity:0.7;
+.footer {
+	text-align: center;
+	padding: 15px;
+	background: var(--nav-bg);
+	font-size: 13px;
+}
+
+#wordCount {
+	text-align: right;
+	font-size: 12px;
+	opacity: 0.7;
 }
 
 /* Progress */
-#progressOverlay{
-    display:none;
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,0.85);
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-    z-index:999;
+#progressOverlay {
+	display: none;
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.85);
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	z-index: 999;
 }
 
-.progress-container{
-    width:80%;
-    max-width:300px;
-    background:rgba(255,255,255,0.1);
-    padding:5px;
-    border-radius:50px;
+.progress-container {
+	width: 80%;
+	max-width: 300px;
+	background: rgba(255, 255, 255, 0.1);
+	padding: 5px;
+	border-radius: 50px;
 }
 
-.progress-bar{
-    height:15px;
-    width:0%;
-    border-radius:50px;
-    background:linear-gradient(90deg,#00f5ff,#0072ff);
-    transition:width 0.2s ease;
+.progress-bar {
+	height: 15px;
+	width: 0%;
+	border-radius: 50px;
+	background: linear-gradient(90deg, #00f5ff, #0072ff);
+	transition: width 0.2s ease;
 }
 
-.progress-text{
-    margin-top:10px;
-    color:#00f5ff;
+.progress-text {
+	margin-top: 10px;
+	color: #00f5ff;
 }
 
 /* Preview */
-#previewModal{
-    display:none;
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,0.95);
-    flex-direction:column;
-    z-index:1000;
+#previewModal {
+	display: none;
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.95);
+	flex-direction: column;
+	z-index: 1000;
 }
 
-#previewModal iframe{
-    flex:1;
-    width:100%;
-    border:none;
+#previewModal iframe {
+	flex: 1;
+	width: 100%;
+	border: none;
 }
 
-.modal-actions{
-    display:flex;
-    gap:10px;
-    padding:12px;
-    background:#111;
+.modal-actions {
+	display: flex;
+	gap: 10px;
+	padding: 12px;
+	background: #111;
 }
 
-.modal-actions button{
-    flex:1;
-    padding:10px;
-    border:none;
-    border-radius:6px;
-    cursor:pointer;
+.modal-actions button {
+	flex: 1;
+	padding: 10px;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
 }
 
-.download-btn{background:#00c6ff;color:#fff;}
-.edit-btn{background:#ffaa00;color:#000;}
-.close-btn{background:#ff4d4d;color:#fff;}
+.download-btn {
+	background: #00c6ff;
+	color: #fff;
+}
+
+.edit-btn {
+	background: #ffaa00;
+	color: #000;
+}
+
+.close-btn {
+	background: #ff4d4d;
+	color: #fff;
+}
 
 /* Toast */
-#toast{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#00c6ff;
-    color:#fff;
-    padding:10px 18px;
-    border-radius:6px;
-    display:none;
-    z-index:2000;
+#toast {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	background: #00c6ff;
+	color: #fff;
+	padding: 10px 18px;
+	border-radius: 6px;
+	display: none;
+	z-index: 2000;
 }
-
 </style>
 </head>
 
 <body>
 
-<div id="tsparticles"></div>
+	<div id="tsparticles"></div>
 
-<header class="hero-header">
-<div class="hero-container">
-<div class="brand-section">
-<img src="/images/shiftedutech-logo.png" class="logo">
-<div class="brand-text">
-<h1>ShiftEduTech - Text To PDF Converter</h1>
-<p>Build Documents. The Smarter Way.</p>
-</div>
-</div>
-<button class="toggle-btn" onclick="toggleMode()">🌙</button>
-</div>
-</header>
+	<header class="hero-header">
+		<div class="hero-container">
+			<div class="brand-section">
+				<img src="/images/shiftedutech-logo.png" class="logo">
+				<div class="brand-text">
+					<h1>ShiftEduTech - Text To PDF Converter</h1>
+					<p>Build Documents. The Smarter Way.</p>
+				</div>
+			</div>
+			<button class="toggle-btn" onclick="toggleMode()">🌙</button>
+		</div>
+	</header>
 
-<div class="main">
-<div class="container">
-<form id="pdfForm">
-<input type="text" name="title" placeholder="Document Title" required>
+	<div class="main">
+		<div class="container">
+			<form id="pdfForm">
+				<input type="text" name="title" placeholder="Document Title"
+					required> <select name="fontSize">
+					<option value="12">Font Size 12</option>
+					<option value="14">Font Size 14</option>
+					<option value="16">Font Size 16</option>
+					<option value="18">Font Size 18</option>
+					<option value="20">Font Size 20</option>
+				</select> <select name="pageSize">
+					<option value="A4">A4</option>
+					<option value="Letter">Letter</option>
+				</select>
 
-<select name="fontSize">
-<option value="12">Font Size 12</option>
-<option value="14">Font Size 14</option>
-<option value="16">Font Size 16</option>
-<option value="18">Font Size 18</option>
-<option value="20">Font Size 20</option>
-</select>
+				<textarea name="content" placeholder="Type or paste your text..."
+					required></textarea>
+				<div id="wordCount">0 words</div>
 
-<select name="pageSize">
-<option value="A4">A4</option>
-<option value="Letter">Letter</option>
-</select>
+				<button type="button" class="generate-btn" onclick="generatePDF()">⚡
+					Build & Preview ⚡</button>
+			</form>
+		</div>
+	</div>
 
-<textarea name="content" placeholder="Type or paste your text..." required></textarea>
-<div id="wordCount">0 words</div>
+	<div class="footer">© 2026 ShiftEduTech | Version 4.0 Pro</div>
 
-<button type="button" class="generate-btn" onclick="generatePDF()">⚡ Build & Preview ⚡</button>
-</form>
-</div>
-</div>
+	<div id="progressOverlay">
+		<div class="progress-container">
+			<div class="progress-bar" id="progressBar"></div>
+		</div>
+		<div class="progress-text" id="progressText">0%</div>
+	</div>
 
-<div class="footer">
-© 2026 ShiftEduTech | Version 4.0 Pro
-</div>
+	<div id="previewModal">
+		<iframe id="pdfPreview"></iframe>
+		<div class="modal-actions">
+			<button class="download-btn" onclick="downloadPDF()">Download</button>
+			<button class="edit-btn" onclick="editDocument()">Edit</button>
+			<button class="close-btn" onclick="closePreview()">Close</button>
+		</div>
+	</div>
 
-<div id="progressOverlay">
-<div class="progress-container">
-<div class="progress-bar" id="progressBar"></div>
-</div>
-<div class="progress-text" id="progressText">0%</div>
-</div>
+	<div id="toast">PDF Ready!</div>
 
-<div id="previewModal">
-<iframe id="pdfPreview"></iframe>
-<div class="modal-actions">
-<button class="download-btn" onclick="downloadPDF()">Download</button>
-<button class="edit-btn" onclick="editDocument()">Edit</button>
-<button class="close-btn" onclick="closePreview()">Close</button>
-</div>
-</div>
-
-<div id="toast">PDF Ready!</div>
-
-<script>
+	<script>
 
 let generatedBlob=null;
 const textarea=document.querySelector("textarea[name='content']");

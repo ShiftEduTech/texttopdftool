@@ -1,20 +1,20 @@
 {
-  "name": "ShiftEduTech Text To PDF",
-  "short_name": "TextToPDF",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#141e30",
-  "theme_color": "#0072ff",
-  "icons": [
-    {
-      "src": "icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
-  ]
+	"name": "ShiftEduTech Text To PDF",
+	"short_name": "TextToPDF",
+	"start_url": "/",
+	"display": "standalone",
+	"theme_color": "#0072ff",
+	"background_color": "#0F172A",
+	"icons": [
+		{
+			"src": "icon-192.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "icon-512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	]
 }
