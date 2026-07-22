@@ -2,444 +2,1003 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-
-<title>Free Online Text to PDF Converter – Fast & Secure | ShiftEduTech</title>
-
+<title>Free Online Text to PDF Converter – Fast, Secure & Private | Shift EduTech</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Convert text to PDF online free with Shift EduTech. Paste text, preview instantly, and download clean professional PDFs. Fast, secure, and private.">
+<meta name="keywords" content="text to pdf, convert text to pdf online, free pdf converter, online pdf tool, Shift EduTech, ShiftEduTech PDF">
+<meta name="author" content="Shift EduTech">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="googlebot" content="index, follow">
+<meta name="application-name" content="Shift EduTech Text to PDF">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Shift EduTech PDF">
+<meta name="theme-color" content="#000000">
+<meta name="msapplication-TileColor" content="#000000">
+<meta name="msapplication-TileImage" content="/icon-192.png?v=6">
+<link rel="canonical" href="/">
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.ico?v=6" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=6">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png?v=6">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=6">
+<link rel="image_src" href="/images/og-image.png?v=6">
 
-<!-- SEO Meta -->
-<meta name="description" content="Free online Text to PDF converter. Convert your text into professional PDF documents instantly. Fast, secure, and no watermark.">
-<meta name="keywords" content="text to pdf, convert text to pdf online, free pdf converter, online pdf tool">
-<meta name="author" content="ShiftEduTech">
-
-<!-- Open Graph (STEP 3) -->
-<meta property="og:title" content="Free Online Text to PDF Converter – Fast & Secure">
-<meta property="og:description" content="Convert text into professional PDFs instantly. No watermark. 100% Free.">
+<meta property="og:site_name" content="Shift EduTech">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Free Online Text to PDF Converter | Shift EduTech">
+<meta property="og:description" content="Convert text into professional PDFs instantly. Free, fast, and secure — by Shift EduTech.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="/">
+<meta property="og:image" content="/images/og-image.png?v=6">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="1200">
+<meta property="og:image:alt" content="Shift EduTech logo – Text to PDF Converter">
 
-<link rel="manifest" href="/manifest.json">
-<meta name="theme-color" content="#0072ff">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free Online Text to PDF Converter | Shift EduTech">
+<meta name="twitter:description" content="Paste text and download clean PDFs instantly with Shift EduTech.">
+<meta name="twitter:image" content="/images/og-image.png?v=6">
+<meta name="twitter:image:alt" content="Shift EduTech logo">
 
-<link rel="icon" href="/favicon.ico?v=2" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=2">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png?v=2">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2">
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "/#organization",
+      "name": "Shift EduTech",
+      "alternateName": ["ShiftEduTech", "Shift Edu Tech"],
+      "url": "/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "/images/shiftedutech-logo.png",
+        "width": 1024,
+        "height": 1024
+      },
+      "image": "/images/og-image.png"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "/#website",
+      "url": "/",
+      "name": "Shift EduTech Text to PDF Converter",
+      "description": "Free online text to PDF converter by Shift EduTech.",
+      "publisher": { "@id": "/#organization" },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "/#webapp",
+      "name": "Shift EduTech Text to PDF Converter",
+      "url": "/",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "Text to PDF conversion",
+        "Live PDF preview",
+        "Notes and Programming templates",
+        "Local history"
+      ],
+      "publisher": { "@id": "/#organization" },
+      "image": "/images/og-image.png",
+      "screenshot": "/images/og-image.png"
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/theme/theme-toggle.css?v=7">
+<script>
+(function () {
+	try {
+		var stored = localStorage.getItem("theme");
+		var theme = stored === "dark" || stored === "light"
+			? stored
+			: (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+		document.documentElement.classList.toggle("dark", theme === "dark");
+		document.documentElement.dataset.theme = theme;
+		document.documentElement.style.colorScheme = theme;
+	} catch (e) {}
+})();
+</script>
 <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
-
-<meta name="theme-color" content="#0072ff">
-<link rel="manifest" href="/manifest.json">
-<link
-	href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
-	rel="stylesheet">
-<script
-	src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
-
 <style>
 :root {
-	--card-bg: rgba(255, 255, 255, 0.12);
-	--text-color: #fff;
-	--input-bg: #fff;
-	--input-text: #000;
-	--nav-bg: rgba(255, 255, 255, 0.08);
+	--page-bg: #f3f4f6;
+	--page-glow: radial-gradient(1200px 500px at 10% -10%, rgba(24,24,27,0.08), transparent 55%),
+		radial-gradient(900px 420px at 100% 0%, rgba(24,24,27,0.05), transparent 50%);
+	--card-bg: rgba(255, 255, 255, 0.88);
+	--text-color: #18181b;
+	--input-bg: #ffffff;
+	--input-text: #18181b;
+	--nav-bg: rgba(255, 255, 255, 0.78);
+	--muted: rgba(24, 24, 27, 0.62);
+	--border-soft: rgba(24, 24, 27, 0.1);
+	--accent: #18181b;
+	--accent-contrast: #ffffff;
+	--danger: #dc2626;
+	--shadow: 0 18px 50px rgba(0,0,0,0.08);
+	--focus: 0 0 0 3px rgba(24,24,27,0.18);
 }
-
-body.dark {
-	--card-bg: rgba(0, 0, 0, 0.6);
-	--input-bg: #1f1f1f;
-	--input-text: #fff;
-	--nav-bg: rgba(0, 0, 0, 0.7);
+html.dark {
+	--page-bg: #050505;
+	--page-glow: radial-gradient(1000px 480px at 15% -15%, rgba(255,255,255,0.08), transparent 55%),
+		radial-gradient(800px 400px at 100% 0%, rgba(255,255,255,0.04), transparent 50%);
+	--card-bg: rgba(24, 24, 27, 0.78);
+	--text-color: #fafafa;
+	--input-bg: #111113;
+	--input-text: #fafafa;
+	--nav-bg: rgba(0, 0, 0, 0.72);
+	--muted: rgba(255, 255, 255, 0.62);
+	--border-soft: rgba(255, 255, 255, 0.12);
+	--accent: #f4f4f5;
+	--accent-contrast: #18181b;
+	--danger: #f87171;
+	--shadow: 0 18px 50px rgba(0,0,0,0.45);
+	--focus: 0 0 0 3px rgba(255,255,255,0.2);
 }
-
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
+* { margin: 0; padding: 0; box-sizing: border-box; }
 body {
-	font-family: 'Inter', sans-serif;
+	font-family: "Plus Jakarta Sans", sans-serif;
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 	color: var(--text-color);
+	background: var(--page-bg);
+	background-image: var(--page-glow);
+	transition: background-color 280ms ease, color 280ms ease;
 }
-
-#tsparticles {
-	position: fixed;
-	inset: 0;
-	z-index: -1;
-}
-
+#tsparticles { position: fixed; inset: 0; z-index: -1; }
 .hero-header {
 	width: 100%;
-	padding: 20px 30px;
+	padding: 18px 24px;
 	background: var(--nav-bg);
-	backdrop-filter: blur(12px);
+	backdrop-filter: blur(14px);
+	border-bottom: 1px solid var(--border-soft);
+	position: sticky;
+	top: 0;
+	z-index: 20;
 }
-
 .hero-container {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	max-width: 1100px;
+	max-width: 920px;
 	margin: auto;
+	gap: 12px;
 }
-
-.brand-section {
-	display: flex;
-	align-items: center;
-	gap: 18px;
-}
-
+.brand-section { display: flex; align-items: center; gap: 16px; min-width: 0; }
 .logo {
-	width: 65px;
-	filter: drop-shadow(0 0 8px #00c6ff);
+	width: 64px;
+	height: 64px;
+	border-radius: 50%;
+	object-fit: cover;
+	background: #000;
+	box-shadow: 0 0 0 2px rgba(255,255,255,0.85), 0 8px 20px rgba(0,0,0,0.18);
+	flex-shrink: 0;
 }
-
 .brand-text h1 {
-	font-size: 20px;
-	font-weight: 600;
+	font-size: clamp(16px, 2.4vw, 20px);
+	font-weight: 700;
+	letter-spacing: -0.02em;
+	line-height: 1.25;
 }
-
-.brand-text p {
-	font-size: 13px;
-	opacity: 0.7;
-}
-
-.toggle-btn {
-	padding: 6px 14px;
-	border-radius: 20px;
-	border: none;
-	background: rgba(255, 255, 255, 0.2);
-	cursor: pointer;
-}
-
+.brand-text p { font-size: 13px; color: var(--muted); margin-top: 2px; }
+#theme-root { display: inline-flex; align-items: center; flex-shrink: 0; }
 .main {
 	flex: 1;
 	display: flex;
 	justify-content: center;
-	padding: 40px 20px;
+	padding: 36px 16px 48px;
 }
-
 .container {
 	width: 100%;
-	max-width: 700px;
+	max-width: 780px;
 	background: var(--card-bg);
-	backdrop-filter: blur(20px);
-	padding: 25px;
-	border-radius: 15px;
+	backdrop-filter: blur(22px);
+	padding: 28px;
+	border-radius: 20px;
+	border: 1px solid var(--border-soft);
+	box-shadow: var(--shadow);
+	animation: rise 420ms ease both;
 }
-
+@keyframes rise {
+	from { opacity: 0; transform: translateY(10px); }
+	to { opacity: 1; transform: none; }
+}
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+label.field {
+	display: block;
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: 0.02em;
+	color: var(--muted);
+	margin-top: 10px;
+	margin-bottom: 2px;
+}
 input, select, textarea {
 	width: 100%;
-	padding: 12px;
-	margin: 10px 0;
-	border-radius: 8px;
-	border: none;
+	padding: 12px 14px;
+	margin: 6px 0 4px;
+	border-radius: 12px;
+	border: 1px solid var(--border-soft);
 	outline: none;
 	background: var(--input-bg);
 	color: var(--input-text);
+	font: inherit;
+	transition: border-color 160ms ease, box-shadow 160ms ease;
 }
-
-textarea {
-	height: 180px;
-	resize: none;
+input:focus, select:focus, textarea:focus { border-color: var(--text-color); box-shadow: var(--focus); }
+textarea { height: 210px; resize: vertical; line-height: 1.55; }
+.template-switch {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 8px;
+	margin: 8px 0 16px;
+	padding: 6px;
+	border-radius: 14px;
+	background: rgba(24,24,27,0.05);
+	border: 1px solid var(--border-soft);
 }
-
+html.dark .template-switch { background: rgba(255,255,255,0.05); }
+.template-chip {
+	appearance: none;
+	border: none;
+	border-radius: 10px;
+	padding: 12px 10px;
+	cursor: pointer;
+	background: transparent;
+	color: var(--muted);
+	font: inherit;
+	font-weight: 600;
+	transition: 0.2s ease;
+}
+.template-chip:hover { color: var(--text-color); }
+.template-chip.active {
+	background: var(--accent);
+	color: var(--accent-contrast);
+	box-shadow: 0 8px 18px rgba(0,0,0,0.16);
+}
+body.mode-programming textarea[name="content"] {
+	height: 270px;
+	font-family: Consolas, "Courier New", ui-monospace, monospace;
+	font-size: 13px;
+	line-height: 1.5;
+	white-space: pre;
+	overflow-x: auto;
+}
+.actions { margin-top: 16px; }
+.generate-btn, .secondary-btn {
+	border: none;
+	border-radius: 12px;
+	cursor: pointer;
+	transition: 0.2s ease;
+	font: inherit;
+}
 .generate-btn {
 	width: 100%;
-	padding: 12px;
+	padding: 15px 18px;
+	background: var(--accent);
+	color: var(--accent-contrast);
+	font-weight: 700;
+	font-size: 15px;
+	letter-spacing: -0.01em;
+	box-shadow: 0 12px 28px rgba(0,0,0,0.14);
+}
+.generate-btn:hover { transform: translateY(-1px); }
+.generate-btn:active { transform: translateY(0); }
+.secondary-btn {
+	flex: 1;
+	min-width: 110px;
+	padding: 10px 12px;
+	background: rgba(24, 24, 27, 0.05);
+	color: inherit;
+	border: 1px solid var(--border-soft);
+	font-size: 13px;
+	font-weight: 600;
+}
+html.dark .secondary-btn { background: rgba(255,255,255,0.08); }
+.secondary-btn:hover { transform: translateY(-1px); border-color: var(--text-color); }
+.generate-btn:disabled, .secondary-btn:disabled { opacity: 0.55; cursor: not-allowed; transform: none; }
+.tools-row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
 	margin-top: 10px;
-	border: none;
+}
+body.mode-programming .tools-row { display: none; }
+.meta-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 10px;
+	font-size: 12px;
+	color: var(--muted);
+	margin-top: 4px;
+}
+.history {
+	margin-top: 22px;
+	border-top: 1px solid var(--border-soft);
+	padding-top: 16px;
+}
+.history h3 {
+	font-size: 14px;
+	font-weight: 700;
+	letter-spacing: -0.01em;
+	margin-bottom: 10px;
+}
+.history-item {
+	display: flex;
+	justify-content: space-between;
+	gap: 10px;
+	align-items: center;
+	padding: 12px 0;
+	border-bottom: 1px solid var(--border-soft);
+	font-size: 12px;
+}
+.history-item:last-child { border-bottom: none; }
+.history-item strong {
+	font-size: 13px;
+	font-weight: 600;
+}
+.history-meta { color: var(--muted); margin-top: 3px; }
+.history-actions {
+	display: flex;
+	gap: 6px;
+	flex-shrink: 0;
+}
+.history-item button {
+	padding: 7px 12px;
+	border: 1px solid var(--border-soft);
 	border-radius: 8px;
-	background: linear-gradient(to right, #00c6ff, #0072ff);
-	color: #fff;
+	background: rgba(24,24,27,0.04);
+	color: inherit;
 	cursor: pointer;
-	transition: 0.3s;
+	font: inherit;
+	font-size: 12px;
+	font-weight: 600;
 }
-
-.generate-btn:hover {
-	transform: scale(1.02);
+html.dark .history-item button { background: rgba(255,255,255,0.08); }
+.history-item button:hover { border-color: var(--text-color); }
+.history-item button.delete-btn {
+	color: var(--danger);
+	border-color: color-mix(in srgb, var(--danger) 35%, transparent);
+	background: color-mix(in srgb, var(--danger) 10%, transparent);
 }
-
-.generate-btn:disabled {
-	opacity: 0.6;
-	cursor: not-allowed;
-}
-
 .footer {
 	text-align: center;
-	padding: 15px;
+	padding: 20px 16px;
 	background: var(--nav-bg);
+	border-top: 1px solid var(--border-soft);
 	font-size: 13px;
+	color: var(--muted);
 }
-
-#wordCount {
-	text-align: right;
-	font-size: 12px;
-	opacity: 0.7;
+.footer-brand {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	margin-bottom: 6px;
+	color: var(--text-color);
 }
-
-/* Progress */
-#progressOverlay {
+.footer-brand img {
+	width: 28px;
+	height: 28px;
+	border-radius: 50%;
+	object-fit: cover;
+	background: #000;
+}
+#progressOverlay, #previewModal {
 	display: none;
 	position: fixed;
 	inset: 0;
-	background: rgba(0, 0, 0, 0.85);
+	z-index: 999;
+}
+#progressOverlay {
+	background: rgba(0, 0, 0, 0.82);
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	z-index: 999;
+	backdrop-filter: blur(4px);
 }
-
+.progress-card {
+	width: min(92vw, 340px);
+	padding: 22px;
+	border-radius: 18px;
+	background: rgba(24,24,27,0.92);
+	border: 1px solid rgba(255,255,255,0.12);
+	box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+}
 .progress-container {
-	width: 80%;
-	max-width: 300px;
-	background: rgba(255, 255, 255, 0.1);
-	padding: 5px;
-	border-radius: 50px;
+	width: 100%;
+	background: rgba(255, 255, 255, 0.12);
+	padding: 4px;
+	border-radius: 999px;
 }
-
 .progress-bar {
-	height: 15px;
+	height: 12px;
 	width: 0%;
-	border-radius: 50px;
-	background: linear-gradient(90deg, #00f5ff, #0072ff);
+	border-radius: 999px;
+	background: linear-gradient(90deg, #ffffff, #a1a1aa);
 	transition: width 0.2s ease;
 }
-
 .progress-text {
-	margin-top: 10px;
-	color: #00f5ff;
+	margin-top: 12px;
+	color: #f4f4f5;
+	text-align: center;
+	font-size: 13px;
+	font-weight: 500;
 }
-
-/* Preview */
 #previewModal {
-	display: none;
-	position: fixed;
-	inset: 0;
-	background: rgba(0, 0, 0, 0.95);
+	background: rgba(0, 0, 0, 0.94);
 	flex-direction: column;
 	z-index: 1000;
 }
-
-#previewModal iframe {
-	flex: 1;
-	width: 100%;
-	border: none;
-}
-
+#previewModal iframe { flex: 1; width: 100%; border: none; background: #111; }
 .modal-actions {
 	display: flex;
 	gap: 10px;
-	padding: 12px;
-	background: #111;
+	padding: 14px;
+	background: #0a0a0a;
+	border-top: 1px solid rgba(255,255,255,0.08);
+	flex-wrap: wrap;
 }
-
 .modal-actions button {
 	flex: 1;
-	padding: 10px;
+	min-width: 110px;
+	padding: 12px;
 	border: none;
-	border-radius: 6px;
+	border-radius: 10px;
 	cursor: pointer;
+	font: inherit;
+	font-weight: 700;
+	transition: transform 0.15s ease, opacity 0.15s ease;
 }
-
-.download-btn {
-	background: #00c6ff;
-	color: #fff;
-}
-
-.edit-btn {
-	background: #ffaa00;
-	color: #000;
-}
-
-.close-btn {
-	background: #ff4d4d;
-	color: #fff;
-}
-
-/* Toast */
+.modal-actions button:hover { transform: translateY(-1px); }
+.download-btn { background: #f4f4f5; color: #111; }
+.share-btn { background: #27272a; color: #fff; border: 1px solid rgba(255,255,255,0.18) !important; }
+.edit-btn { background: #fbbf24; color: #111; }
+.close-btn { background: #ef4444; color: #fff; }
 #toast {
 	position: fixed;
-	bottom: 20px;
-	right: 20px;
-	background: #00c6ff;
+	bottom: 22px;
+	right: 22px;
+	background: #111;
+	border: 1px solid rgba(255,255,255,0.2);
 	color: #fff;
-	padding: 10px 18px;
-	border-radius: 6px;
+	padding: 12px 18px;
+	border-radius: 12px;
 	display: none;
 	z-index: 2000;
+	max-width: min(320px, calc(100vw - 32px));
+	box-shadow: 0 12px 30px rgba(0,0,0,0.28);
+	font-size: 13px;
+	font-weight: 500;
+}
+@media (max-width: 720px) {
+	.grid-2 { grid-template-columns: 1fr; }
+	.container { padding: 20px; border-radius: 16px; }
+	.logo { width: 52px; height: 52px; }
+	.main { padding-top: 24px; }
+	.history-item { flex-direction: column; align-items: flex-start; }
+	.history-actions { width: 100%; }
+	.history-item button { flex: 1; }
 }
 </style>
 </head>
-
 <body>
-
 	<div id="tsparticles"></div>
-
-	<header class="hero-header">
+	<header class="hero-header" role="banner">
 		<div class="hero-container">
 			<div class="brand-section">
-				<img src="/images/shiftedutech-logo.png" class="logo">
+				<img src="/images/shiftedutech-logo.png?v=6" class="logo" width="64" height="64" alt="Shift EduTech logo">
 				<div class="brand-text">
-					<h1>ShiftEduTech - Text To PDF Converter</h1>
+					<h1>Shift EduTech Text to PDF</h1>
 					<p>Build Documents. The Smarter Way.</p>
 				</div>
 			</div>
-			<button class="toggle-btn" onclick="toggleMode()">🌙</button>
+			<div id="theme-root"></div>
 		</div>
 	</header>
 
-	<div class="main">
-		<div class="container">
+	<main class="main" role="main">
+		<section class="container" aria-label="Text to PDF converter">
 			<form id="pdfForm">
-				<input type="text" name="title" placeholder="Document Title"
-					required> <select name="fontSize">
-					<option value="12">Font Size 12</option>
-					<option value="14">Font Size 14</option>
-					<option value="16">Font Size 16</option>
-					<option value="18">Font Size 18</option>
-					<option value="20">Font Size 20</option>
-				</select> <select name="pageSize">
-					<option value="A4">A4</option>
-					<option value="Letter">Letter</option>
-				</select>
+				<label class="field">Template</label>
+				<div class="template-switch" role="tablist" aria-label="Document template">
+					<button type="button" class="template-chip active" data-template="notes" role="tab" aria-selected="true">Notes</button>
+					<button type="button" class="template-chip" data-template="programming" role="tab" aria-selected="false">Programming</button>
+				</div>
+				<input type="hidden" name="template" id="templateSelect" value="notes">
 
-				<textarea name="content" placeholder="Type or paste your text..."
-					required></textarea>
-				<div id="wordCount">0 words</div>
+				<div class="grid-2">
+					<div>
+						<label class="field" for="fileName">File Name</label>
+						<input id="fileName" type="text" name="fileName" placeholder="JAVA OOPS Notes" maxlength="200" autocomplete="off">
+					</div>
+					<div>
+						<label class="field" for="docHeading">Heading</label>
+						<input id="docHeading" type="text" name="heading" placeholder="Enter bold heading for the PDF" maxlength="300" autocomplete="off">
+					</div>
+				</div>
 
-				<button type="button" class="generate-btn" onclick="generatePDF()">⚡
-					Build & Preview ⚡</button>
+				<div class="grid-2">
+					<div>
+						<label class="field" for="fontSize">Font Size</label>
+						<select id="fontSize" name="fontSize">
+							<option value="11">11</option>
+							<option value="12">12</option>
+							<option value="14" selected>14</option>
+							<option value="16">16</option>
+							<option value="18">18</option>
+							<option value="20">20</option>
+						</select>
+					</div>
+					<div>
+						<label class="field" for="pageSize">Page Size</label>
+						<select id="pageSize" name="pageSize">
+							<option value="A4">A4</option>
+							<option value="Letter">Letter</option>
+						</select>
+					</div>
+				</div>
+
+				<label class="field" for="contentArea">Content</label>
+				<textarea id="contentArea" name="content" placeholder="Type or paste your text..." required maxlength="100000"></textarea>
+				<div class="meta-row">
+					<span id="wordCount">0 words</span>
+					<span id="charCount">0 / 100000 chars</span>
+				</div>
+
+				<div class="actions">
+					<button type="button" class="generate-btn" id="generateBtn">Build & Preview</button>
+				</div>
+				<div class="tools-row" id="toolsRow">
+					<button type="button" class="secondary-btn" id="smartBtn">Smart Format</button>
+					<button type="button" class="secondary-btn" id="aiRewriteBtn">AI Rewrite</button>
+					<button type="button" class="secondary-btn" id="aiSummaryBtn">AI Summarize</button>
+					<button type="button" class="secondary-btn" id="aiExpandBtn">AI Expand</button>
+				</div>
 			</form>
+
+			<div class="history">
+				<h3>Local history</h3>
+				<div id="historyList"><div class="history-item">No saved documents yet.</div></div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="footer" role="contentinfo">
+		<div class="footer-brand">
+			<img src="/images/shiftedutech-logo.png?v=6" width="28" height="28" alt="Shift EduTech">
+			<strong>Shift EduTech</strong>
+		</div>
+		<div>© 2026 Shift EduTech · Free Text to PDF Converter</div>
+	</footer>
+
+	<div id="progressOverlay" aria-live="polite" aria-busy="true">
+		<div class="progress-card">
+			<div class="progress-container"><div class="progress-bar" id="progressBar"></div></div>
+			<div class="progress-text" id="progressText">0%</div>
 		</div>
 	</div>
 
-	<div class="footer">© 2026 ShiftEduTech | Version 4.0 Pro</div>
-
-	<div id="progressOverlay">
-		<div class="progress-container">
-			<div class="progress-bar" id="progressBar"></div>
-		</div>
-		<div class="progress-text" id="progressText">0%</div>
-	</div>
-
-	<div id="previewModal">
-		<iframe id="pdfPreview"></iframe>
+	<div id="previewModal" role="dialog" aria-modal="true" aria-label="PDF preview">
+		<iframe id="pdfPreview" title="PDF preview"></iframe>
 		<div class="modal-actions">
-			<button class="download-btn" onclick="downloadPDF()">Download</button>
-			<button class="edit-btn" onclick="editDocument()">Edit</button>
-			<button class="close-btn" onclick="closePreview()">Close</button>
+			<button class="download-btn" type="button" onclick="downloadPDF()">Download</button>
+			<button class="share-btn" type="button" onclick="sharePDF()">Share link</button>
+			<button class="edit-btn" type="button" onclick="editDocument()">Edit</button>
+			<button class="close-btn" type="button" onclick="closePreview()">Close</button>
 		</div>
 	</div>
-	<div id="toast">PDF Ready!</div>
+	<div id="toast" role="status">PDF Ready!</div>
 
-	<script>
+<script>
+const TEMPLATES = {
+  notes: { marginTop:40, marginBottom:40, marginLeft:40, marginRight:40, lineSpacing:1.35, alignment:"LEFT", fontSize:14 },
+  programming: { marginTop:40, marginBottom:40, marginLeft:40, marginRight:40, lineSpacing:1.3, alignment:"LEFT", fontSize:12 }
+};
 
-let generatedBlob=null;
-const textarea=document.querySelector("textarea[name='content']");
-textarea.value=localStorage.getItem("draft")||"";
+let generatedBlob = null;
+let previewUrl = null;
+const form = document.getElementById("pdfForm");
+const textarea = form.querySelector("textarea[name='content']");
+const fileNameInput = form.querySelector("input[name='fileName']");
+const headingInput = form.querySelector("input[name='heading']");
 
-textarea.addEventListener("input",()=>{
-localStorage.setItem("draft",textarea.value);
-const words=textarea.value.trim().split(/\s+/).filter(Boolean);
-document.getElementById("wordCount").innerText=words.length+" words";
+textarea.value = localStorage.getItem("draft") || "";
+updateCounts();
+
+textarea.addEventListener("input", () => {
+  localStorage.setItem("draft", textarea.value);
+  updateCounts();
 });
 
-function toggleMode(){document.body.classList.toggle("dark");}
+document.querySelectorAll(".template-chip").forEach((chip) => {
+  chip.addEventListener("click", () => applyTemplate(chip.dataset.template));
+});
 
-tsParticles.load("tsparticles",{background:{color:{value:"#141e30"}},particles:{number:{value:40},size:{value:3},move:{speed:1}}});
+document.getElementById("generateBtn").addEventListener("click", generatePDF);
+document.getElementById("smartBtn").addEventListener("click", () => runAi("smart-format"));
+document.getElementById("aiRewriteBtn").addEventListener("click", () => runAi("rewrite"));
+document.getElementById("aiSummaryBtn").addEventListener("click", () => runAi("summarize"));
+document.getElementById("aiExpandBtn").addEventListener("click", () => runAi("expand"));
 
-async function generatePDF(){
-
-const btn=document.querySelector(".generate-btn");
-btn.disabled=true;
-btn.innerText="Generating...";
-
-const formData=new FormData(document.getElementById("pdfForm"));
-const overlay=document.getElementById("progressOverlay");
-const bar=document.getElementById("progressBar");
-const text=document.getElementById("progressText");
-
-overlay.style.display="flex";
-bar.style.width="0%";
-text.innerText="0%";
-
-let progress=0;
-const interval=setInterval(()=>{
-progress+=5;
-if(progress<=90){
-bar.style.width=progress+"%";
-text.innerText=progress+"%";
-}
-},100);
-
-try{
-const response=await fetch("/generate",{method:"POST",body:formData});
-if(!response.ok) throw new Error();
-
-generatedBlob=await response.blob();
-
-clearInterval(interval);
-bar.style.width="100%";
-text.innerText="100%";
-
-setTimeout(()=>{
-overlay.style.display="none";
-openPreview();
-showToast("PDF Ready!");
-},500);
-
-}catch{
-overlay.style.display="none";
-showToast("⚠️ Unable to generate PDF");
+function updateCounts() {
+  const words = textarea.value.trim().split(/\s+/).filter(Boolean);
+  document.getElementById("wordCount").innerText = words.length + " words";
+  document.getElementById("charCount").innerText = textarea.value.length + " / 100000 chars";
 }
 
-btn.disabled=false;
-btn.innerText="⚡ Build & Preview ⚡";
+function applyTemplate(id) {
+  const key = TEMPLATES[id] ? id : "notes";
+  const t = TEMPLATES[key];
+  if (!t) return;
+
+  form.querySelector("[name='template']").value = key;
+  setValue("fontSize", t.fontSize);
+
+  document.querySelectorAll(".template-chip").forEach((chip) => {
+    const active = chip.dataset.template === key;
+    chip.classList.toggle("active", active);
+    chip.setAttribute("aria-selected", active ? "true" : "false");
+  });
+
+  document.body.classList.toggle("mode-programming", key === "programming");
+
+  if (key === "programming") {
+    textarea.placeholder = "Paste program / code here...\n\nExample:\nclass Demo {\n    public static void main(String[] args) {\n        System.out.println(\"Hello\");\n    }\n}";
+    fileNameInput.placeholder = "Java Programs";
+    headingInput.placeholder = "Program Title";
+  } else {
+    textarea.placeholder = "Type or paste your notes...";
+    fileNameInput.placeholder = "JAVA OOPS Notes";
+    headingInput.placeholder = "Enter bold heading for the PDF";
+  }
+  document.getElementById("generateBtn").innerText = "Build & Preview";
 }
 
-function openPreview(){
-const url=URL.createObjectURL(generatedBlob);
-document.getElementById("pdfPreview").src=url;
-document.getElementById("previewModal").style.display="flex";
+function setValue(name, value) {
+  const el = form.querySelector(`[name='${name}']`);
+  if (el) el.value = value;
 }
 
-function closePreview(){document.getElementById("previewModal").style.display="none";}
-function editDocument(){closePreview();textarea.focus();}
-
-function downloadPDF(){
-let title=document.querySelector("input[name='title']").value.trim()||"document";
-title=title.replace(/[\\\/:*?"<>|]/g,"").replace(/\s+/g,"_").toLowerCase();
-
-const now=new Date();
-const timestamp=now.getFullYear()+
-String(now.getMonth()+1).padStart(2,'0')+
-String(now.getDate()).padStart(2,'0')+"_"+
-String(now.getHours()).padStart(2,'0')+
-String(now.getMinutes()).padStart(2,'0');
-
-const a=document.createElement("a");
-a.href=URL.createObjectURL(generatedBlob);
-a.download=`${title}_set_${timestamp}.pdf`;
-a.click();
+function buildPayload() {
+  let templateId = form.querySelector("[name='template']").value;
+  if (!TEMPLATES[templateId]) templateId = "notes";
+  const t = TEMPLATES[templateId];
+  return {
+    fileName: fileNameInput.value || "",
+    heading: headingInput.value || "",
+    content: textarea.value || "",
+    fontSize: Number(form.querySelector("[name='fontSize']").value || t.fontSize),
+    pageSize: form.querySelector("[name='pageSize']").value || "A4",
+    template: templateId,
+    marginTop: t.marginTop,
+    marginBottom: t.marginBottom,
+    marginLeft: t.marginLeft,
+    marginRight: t.marginRight,
+    lineSpacing: t.lineSpacing,
+    alignment: t.alignment,
+    language: "en",
+    orgName: "Shift EduTech"
+  };
 }
 
-function showToast(message){
-const toast=document.getElementById("toast");
-toast.innerText=message;
-toast.style.display="block";
-setTimeout(()=>toast.style.display="none",3000);
+function setProgress(pct, message) {
+  const overlay = document.getElementById("progressOverlay");
+  overlay.style.display = "flex";
+  document.getElementById("progressBar").style.width = pct + "%";
+  document.getElementById("progressText").innerText = (message ? message + " · " : "") + pct + "%";
 }
 
-if('serviceWorker' in navigator){
-navigator.serviceWorker.register('/sw.js');
+function hideProgress() {
+  document.getElementById("progressOverlay").style.display = "none";
 }
 
+async function generatePDF() {
+  const btn = document.getElementById("generateBtn");
+  const payload = buildPayload();
+  if (!payload.content.trim()) {
+    showToast("Please enter some content first");
+    return;
+  }
+  btn.disabled = true;
+  btn.innerText = "Building...";
+  setProgress(5, "Queued");
+  try {
+    const start = await fetch("/api/generate/async", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    });
+    const startBody = await start.json().catch(() => ({}));
+    if (!start.ok) throw new Error(startBody.message || "Unable to start generation");
+    if (!startBody.jobId) throw new Error("No job id returned");
+
+    let status = startBody;
+    while (status.status === "QUEUED" || status.status === "RUNNING") {
+      setProgress(status.progress || 10, status.message || status.status);
+      await sleep(350);
+      const res = await fetch("/api/generate/status/" + status.jobId);
+      status = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error(status.message || "Status check failed");
+    }
+    if (status.status === "FAILED") throw new Error(status.message || "Generation failed");
+
+    setProgress(95, "Downloading result");
+    const pdfRes = await fetch("/api/generate/result/" + status.jobId);
+    if (!pdfRes.ok) {
+      const err = await pdfRes.json().catch(() => ({}));
+      throw new Error(err.message || "Unable to fetch PDF");
+    }
+    generatedBlob = await pdfRes.blob();
+    setProgress(100, "Done");
+    await saveHistory(payload);
+    setTimeout(() => {
+      hideProgress();
+      openPreview();
+      showToast("PDF Ready!");
+    }, 250);
+  } catch (err) {
+    hideProgress();
+    showToast(err.message || "Unable to generate PDF");
+  } finally {
+    btn.disabled = false;
+    applyTemplate(form.querySelector("[name='template']").value || "notes");
+  }
+}
+
+async function runAi(action) {
+  try {
+    showToast("Running " + action + "...");
+    const res = await fetch("/api/ai/assist", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ action, title: fileNameInput.value || headingInput.value, content: textarea.value })
+    });
+    const body = await res.json();
+    if (!res.ok) throw new Error(body.message || "AI assist failed");
+    textarea.value = body.content || "";
+    if (body.suggestedTitle && !headingInput.value.trim()) headingInput.value = body.suggestedTitle;
+    if (body.suggestedFontSize) setValue("fontSize", body.suggestedFontSize);
+    localStorage.setItem("draft", textarea.value);
+    updateCounts();
+    showToast("Updated via " + (body.mode || "AI") + " (" + action + ")");
+  } catch (err) {
+    showToast(err.message || "AI assist failed");
+  }
+}
+
+function openPreview() {
+  if (previewUrl) URL.revokeObjectURL(previewUrl);
+  previewUrl = URL.createObjectURL(generatedBlob);
+  document.getElementById("pdfPreview").src = previewUrl;
+  document.getElementById("previewModal").style.display = "flex";
+}
+function closePreview() { document.getElementById("previewModal").style.display = "none"; }
+function editDocument() { closePreview(); textarea.focus(); }
+
+function downloadPDF() {
+  if (!generatedBlob) return;
+  let name = fileNameInput.value.trim() || headingInput.value.trim() || "document";
+  name = name.replace(/[\\\/:*?"<>|]/g, "").replace(/\s+/g, "_");
+  if (!name.toLowerCase().endsWith(".pdf")) name += ".pdf";
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(generatedBlob);
+  a.download = name;
+  a.click();
+}
+
+async function sharePDF() {
+  try {
+    const res = await fetch("/api/share", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(buildPayload())
+    });
+    const body = await res.json();
+    if (!res.ok) throw new Error(body.message || "Share failed");
+    const url = location.origin + body.url;
+    if (navigator.clipboard) await navigator.clipboard.writeText(url);
+    showToast("Share link copied");
+  } catch (err) {
+    showToast(err.message || "Share failed");
+  }
+}
+
+function showToast(message) {
+  const toast = document.getElementById("toast");
+  toast.innerText = message;
+  toast.style.display = "block";
+  setTimeout(() => toast.style.display = "none", 3200);
+}
+
+function sleep(ms) { return new Promise((r) => setTimeout(r, ms)); }
+
+const DB_NAME = "shiftedutech-pdf-history";
+const STORE = "docs";
+
+function openDb() {
+  return new Promise((resolve, reject) => {
+    const req = indexedDB.open(DB_NAME, 1);
+    req.onupgradeneeded = () => {
+      const db = req.result;
+      if (!db.objectStoreNames.contains(STORE)) {
+        db.createObjectStore(STORE, { keyPath: "id", autoIncrement: true });
+      }
+    };
+    req.onsuccess = () => resolve(req.result);
+    req.onerror = () => reject(req.error);
+  });
+}
+
+async function saveHistory(payload) {
+  try {
+    const settings = payload || buildPayload();
+    const db = await openDb();
+    const tx = db.transaction(STORE, "readwrite");
+    tx.objectStore(STORE).add({
+      title: fileNameInput.value || headingInput.value || "Untitled",
+      fileName: fileNameInput.value || "",
+      heading: headingInput.value || "",
+      content: textarea.value,
+      template: form.querySelector("[name='template']").value,
+      settings,
+      createdAt: Date.now()
+    });
+    await new Promise((resolve, reject) => {
+      tx.oncomplete = resolve;
+      tx.onerror = () => reject(tx.error);
+    });
+    await renderHistory();
+  } catch (_) {}
+}
+
+async function renderHistory() {
+  const list = document.getElementById("historyList");
+  try {
+    const db = await openDb();
+    const tx = db.transaction(STORE, "readonly");
+    const req = tx.objectStore(STORE).getAll();
+    const rows = await new Promise((resolve, reject) => {
+      req.onsuccess = () => resolve(req.result || []);
+      req.onerror = () => reject(req.error);
+    });
+    rows.sort((a, b) => b.createdAt - a.createdAt);
+    const latest = rows.slice(0, 8);
+    if (!latest.length) {
+      list.innerHTML = '<div class="history-item">No saved documents yet.</div>';
+      return;
+    }
+    list.innerHTML = latest.map((row) => `
+      <div class="history-item">
+        <div>
+          <strong>${escapeHtml(row.title)}</strong>
+          <div class="history-meta">${new Date(row.createdAt).toLocaleString()} · ${escapeHtml(row.template || "notes")}</div>
+        </div>
+        <div class="history-actions">
+          <button type="button" class="restore-btn" data-id="${row.id}">Restore</button>
+          <button type="button" class="delete-btn" data-id="${row.id}">Delete</button>
+        </div>
+      </div>
+    `).join("");
+    list.querySelectorAll("button.restore-btn").forEach((btn) => {
+      btn.addEventListener("click", () => restoreHistory(Number(btn.dataset.id), rows));
+    });
+    list.querySelectorAll("button.delete-btn").forEach((btn) => {
+      btn.addEventListener("click", () => deleteHistory(Number(btn.dataset.id)));
+    });
+  } catch (_) {
+    list.innerHTML = '<div class="history-item">History unavailable in this browser.</div>';
+  }
+}
+
+function restoreHistory(id, rows) {
+  const row = rows.find((r) => r.id === id);
+  if (!row) return;
+  textarea.value = row.content || "";
+  if (row.settings) {
+    ["fileName", "heading", "template", "fontSize", "pageSize"].forEach((key) => {
+      if (row.settings[key] == null) return;
+      const el = form.querySelector(`[name='${key}']`);
+      if (el) el.value = row.settings[key];
+    });
+    if (!fileNameInput.value && (row.settings.title || row.title)) {
+      fileNameInput.value = row.settings.title || row.title || "";
+    }
+  } else {
+    fileNameInput.value = row.fileName || row.title || "";
+    headingInput.value = row.heading || "";
+  }
+  localStorage.setItem("draft", textarea.value);
+  updateCounts();
+  applyTemplate(form.querySelector("[name='template']").value || row.template || "notes");
+  showToast("Restored from history");
+}
+
+async function deleteHistory(id) {
+  try {
+    const db = await openDb();
+    const tx = db.transaction(STORE, "readwrite");
+    tx.objectStore(STORE).delete(id);
+    await new Promise((resolve, reject) => {
+      tx.oncomplete = resolve;
+      tx.onerror = () => reject(tx.error);
+    });
+    await renderHistory();
+    showToast("Deleted from history");
+  } catch (_) {
+    showToast("Unable to delete history item");
+  }
+}
+
+function escapeHtml(value) {
+  return String(value).replace(/[&<>"']/g, (c) => ({
+    "&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"
+  })[c]);
+}
+
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("/sw.js").catch(() => {});
+}
+
+function particlesOptions(isDark) {
+  return {
+    background: { color: { value: "transparent" } },
+    particles: {
+      number: { value: 28 },
+      color: { value: isDark ? "#ffffff" : "#27272a" },
+      size: { value: 2 },
+      move: { speed: 0.55 },
+      opacity: { value: isDark ? 0.28 : 0.14 },
+      links: { enable: false }
+    }
+  };
+}
+
+function loadParticlesForTheme() {
+  tsParticles.load("tsparticles", particlesOptions(document.documentElement.classList.contains("dark")));
+}
+
+loadParticlesForTheme();
+window.addEventListener("themechange", loadParticlesForTheme);
+
+(function syncAbsoluteSeoUrls() {
+  const origin = window.location.origin;
+  const absolute = (path) => origin + path;
+  const pairs = [
+    ['link[rel="canonical"]', "href", "/"],
+    ['meta[property="og:url"]', "content", "/"],
+    ['meta[property="og:image"]', "content", "/images/og-image.png?v=6"],
+    ['meta[name="twitter:image"]', "content", "/images/og-image.png?v=6"],
+    ['link[rel="image_src"]', "href", "/images/og-image.png?v=6"]
+  ];
+  pairs.forEach(([selector, attr, path]) => {
+    const el = document.querySelector(selector);
+    if (el) el.setAttribute(attr, absolute(path));
+  });
+})();
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closePreview();
+});
+
+applyTemplate(form.querySelector("[name='template']").value || "notes");
+renderHistory();
 </script>
-
+<script src="/theme/theme-toggle.js?v=7" defer></script>
 </body>
 </html>

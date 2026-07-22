@@ -4,7 +4,7 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-### STS ###
+### STS / Eclipse ###
 .apt_generated
 .classpath
 .factorypath
@@ -12,6 +12,7 @@ target/
 .settings
 .springBeans
 .sts4-cache
+.metadata/
 
 ### IntelliJ IDEA ###
 .idea
@@ -31,3 +32,14 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Frontend ###
+frontend/node_modules/
+frontend/dist/
+
+### Local leftovers ###
+payload.json
+emoji-test.pdf
+*.log
+.DS_Store
+Thumbs.db

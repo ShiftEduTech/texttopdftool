@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Disallow: /api/
+Disallow: /actuator/
+Disallow: /generate
+
+Sitemap: /sitemap.xml
