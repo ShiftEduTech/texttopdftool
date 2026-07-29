@@ -29,7 +29,7 @@ public class PdfService {
 			FontService fontService,
 			DocumentTemplateService templateService,
 			PdfValidationService validationService,
-			@Value("${app.branding.org-name:Shift EduTech}") String defaultOrgName) {
+			@Value("${app.branding.org-name:CodePDF}") String defaultOrgName) {
 		this.fontService = fontService;
 		this.templateService = templateService;
 		this.validationService = validationService;
@@ -55,10 +55,10 @@ public class PdfService {
 				request.getLanguage() == null || request.getLanguage().isBlank() ? "en" : request.getLanguage()));
 		String documentTitle = !isBlank(request.getFileName())
 				? request.getFileName()
-				: (!isBlank(request.getHeading()) ? request.getHeading() : "Shift EduTech Document");
+				: (!isBlank(request.getHeading()) ? request.getHeading() : "CodePDF Document");
 		pdf.getDocumentInfo().setTitle(documentTitle);
 		pdf.getDocumentInfo().setAuthor(orgName(request));
-		pdf.getDocumentInfo().setCreator("Shift EduTech Text to PDF");
+		pdf.getDocumentInfo().setCreator("CodePDF");
 		pdf.setDefaultPageSize(resolvePageSize(request.getPageSize()));
 
 		Document document = new Document(pdf);

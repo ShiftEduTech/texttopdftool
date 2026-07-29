@@ -1,5 +1,5 @@
-const CACHE_NAME = "text-to-pdf-cache-v7";
-const urlsToCache = ["/", "/manifest.json", "/images/shiftedutech-logo.png", "/images/og-image.png"];
+const CACHE_NAME = "codepdf-cache-v10";
+const urlsToCache = ["/", "/manifest.json", "/images/codepdf-logo.png", "/images/og-image.png"];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(

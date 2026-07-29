@@ -33,7 +33,7 @@ class PdfControllerTests {
 		MvcResult result = mockMvc.perform(multipart("/generate")
 						.param("fileName", "JAVA OOPS Notes")
 						.param("heading", "Introduction to OOPS")
-						.param("content", "Hello ShiftEduTech PDF")
+						.param("content", "Hello CodePDF")
 						.param("fontSize", "14")
 						.param("pageSize", "A4")
 						.param("alignment", "LEFT")

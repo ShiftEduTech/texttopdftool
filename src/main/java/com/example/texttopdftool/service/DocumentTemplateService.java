@@ -18,10 +18,9 @@ public class DocumentTemplateService {
 	private final Map<String, DocumentTemplate> templates = new LinkedHashMap<>();
 
 	public DocumentTemplateService() {
-		templates.put("notes", new DocumentTemplate("notes", "Notes", 40, 40, 40, 40, 1.35f, "LEFT", 14, false));
-		// Same clean look as notes, but keeps every code line as-is.
+		templates.put("notes", new DocumentTemplate("notes", "Text to PDF", 40, 40, 40, 40, 1.35f, "LEFT", 14, false));
 		templates.put("programming",
-				new DocumentTemplate("programming", "Programming", 40, 40, 40, 40, 1.3f, "LEFT", 12, true));
+				new DocumentTemplate("programming", "Program to PDF", 40, 40, 40, 40, 1.3f, "LEFT", 12, true));
 	}
 
 	public Collection<DocumentTemplate> list() {

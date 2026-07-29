@@ -46,14 +46,14 @@ export default function ThemeToggle() {
       title={nextLabel}
       className={[
         "group relative inline-flex h-10 w-10 items-center justify-center",
-        "rounded-full border border-zinc-200/80 bg-white/80 text-zinc-700 shadow-sm",
+        "rounded-full border border-slate-200 bg-white text-slate-700 shadow-sm",
         "backdrop-blur-md transition-all duration-280 ease-out",
-        "hover:-translate-y-0.5 hover:border-zinc-300 hover:bg-white hover:shadow-md",
+        "hover:-translate-y-0.5 hover:border-blue-300 hover:bg-white hover:shadow-md",
         "active:translate-y-0 active:scale-95",
-        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400/70 focus-visible:ring-offset-2 focus-visible:ring-offset-white",
-        "dark:border-white/10 dark:bg-zinc-900/70 dark:text-zinc-100 dark:shadow-black/30",
-        "dark:hover:border-white/20 dark:hover:bg-zinc-800/90",
-        "dark:focus-visible:ring-zinc-500/80 dark:focus-visible:ring-offset-black",
+        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/60 focus-visible:ring-offset-2 focus-visible:ring-offset-white",
+        "dark:border-white/10 dark:bg-slate-900/80 dark:text-slate-100 dark:shadow-black/30",
+        "dark:hover:border-blue-400/40 dark:hover:bg-slate-800/90",
+        "dark:focus-visible:ring-blue-400/70 dark:focus-visible:ring-offset-[#0F172A]",
         pressed ? "animate-theme-pop" : "",
       ].join(" ")}
     >
