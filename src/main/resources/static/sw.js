@@ -1,4 +1,4 @@
-const CACHE_NAME = "codepdf-cache-v10";
+const CACHE_NAME = "codepdf-cache-v11";
 const urlsToCache = ["/", "/manifest.json", "/images/codepdf-logo.png", "/images/og-image.png"];
 
 self.addEventListener("install", (event) => {
