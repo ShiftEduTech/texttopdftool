@@ -1,5 +1,5 @@
-const CACHE_NAME = "codepdf-cache-v11";
-const urlsToCache = ["/", "/manifest.json", "/images/codepdf-logo.png", "/images/og-image.png"];
+const CACHE_NAME = "codepdf-cache-v12";
+const urlsToCache = ["/", "/manifest.json", "/images/codepdf-logo.png", "/images/og-image.png?v=12"];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(

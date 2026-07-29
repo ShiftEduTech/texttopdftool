@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>CodePDF – Convert Anything. Share Everywhere.</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="description" content="CodePDF helps you convert text, code and other content into professional PDFs instantly. Fast. Simple. Reliable.">
 <meta name="keywords" content="CodePDF, text to pdf, code to pdf, convert text to pdf, free pdf converter, program to pdf">
 <meta name="author" content="CodePDF">
@@ -15,22 +15,23 @@
 <meta name="apple-mobile-web-app-title" content="CodePDF">
 <meta name="theme-color" content="#2563EB">
 <meta name="msapplication-TileColor" content="#0F172A">
-<meta name="msapplication-TileImage" content="/icon-192.png?v=10">
-<link rel="canonical" href="/">
+<meta name="msapplication-TileImage" content="https://texttopdftool.onrender.com/icon-192.png?v=12">
+<link rel="canonical" href="https://texttopdftool.onrender.com/">
 <link rel="manifest" href="/manifest.json">
-<link rel="icon" href="/favicon.ico?v=10" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=10">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png?v=10">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=10">
-<link rel="image_src" href="/images/og-image.png?v=11">
+<link rel="icon" href="/favicon.ico?v=12" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=12">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png?v=12">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=12">
+<link rel="image_src" href="https://texttopdftool.onrender.com/images/og-image.png?v=12">
 
 <meta property="og:site_name" content="CodePDF">
 <meta property="og:locale" content="en_US">
 <meta property="og:title" content="CodePDF – Convert Anything. Share Everywhere.">
 <meta property="og:description" content="Convert text and code into professional PDFs instantly. Fast. Simple. Reliable.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="/">
-<meta property="og:image" content="/images/og-image.png?v=11">
+<meta property="og:url" content="https://texttopdftool.onrender.com/">
+<meta property="og:image" content="https://texttopdftool.onrender.com/images/og-image.png?v=12">
+<meta property="og:image:secure_url" content="https://texttopdftool.onrender.com/images/og-image.png?v=12">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -39,7 +40,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="CodePDF – Convert Anything. Share Everywhere.">
 <meta name="twitter:description" content="Convert text and code into professional PDFs instantly.">
-<meta name="twitter:image" content="/images/og-image.png?v=11">
+<meta name="twitter:image" content="https://texttopdftool.onrender.com/images/og-image.png?v=12">
 <meta name="twitter:image:alt" content="CodePDF logo">
 
 <script type="application/ld+json">
@@ -48,31 +49,31 @@
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "/#organization",
+      "@id": "https://texttopdftool.onrender.com/#organization",
       "name": "CodePDF",
-      "url": "/",
+      "url": "https://texttopdftool.onrender.com/",
       "logo": {
         "@type": "ImageObject",
-        "url": "/images/codepdf-logo.png",
+        "url": "https://texttopdftool.onrender.com/images/codepdf-logo.png",
         "width": 1024,
         "height": 1024
       },
-      "image": "/images/og-image.png"
+      "image": "https://texttopdftool.onrender.com/images/og-image.png?v=12"
     },
     {
       "@type": "WebSite",
-      "@id": "/#website",
-      "url": "/",
+      "@id": "https://texttopdftool.onrender.com/#website",
+      "url": "https://texttopdftool.onrender.com/",
       "name": "CodePDF",
       "description": "Convert Anything. Share Everywhere.",
-      "publisher": { "@id": "/#organization" },
+      "publisher": { "@id": "https://texttopdftool.onrender.com/#organization" },
       "inLanguage": "en"
     },
     {
       "@type": "WebApplication",
-      "@id": "/#webapp",
+      "@id": "https://texttopdftool.onrender.com/#webapp",
       "name": "CodePDF",
-      "url": "/",
+      "url": "https://texttopdftool.onrender.com/",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
       "browserRequirements": "Requires JavaScript",
@@ -87,8 +88,8 @@
         "Live PDF preview",
         "Local history"
       ],
-      "publisher": { "@id": "/#organization" },
-      "image": "/images/og-image.png"
+      "publisher": { "@id": "https://texttopdftool.onrender.com/#organization" },
+      "image": "https://texttopdftool.onrender.com/images/og-image.png?v=12"
     }
   ]
 }
@@ -155,15 +156,26 @@ html.dark {
 	--focus: 0 0 0 3px rgba(37, 99, 235, 0.45);
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 body {
 	font-family: Inter, sans-serif;
 	min-height: 100vh;
+	min-height: 100dvh;
 	display: flex;
 	flex-direction: column;
 	color: var(--text-color);
 	background: var(--page-bg);
 	background-image: var(--page-glow);
 	transition: background-color 280ms ease, color 280ms ease;
+	overflow-x: hidden;
+}
+button, input, select, textarea { touch-action: manipulation; }
+@media (hover: none) {
+	.generate-btn:hover,
+	.secondary-btn:hover,
+	.template-chip:hover,
+	.modal-actions button:hover,
+	.history-item button:hover { transform: none; filter: none; }
 }
 h1, h2, h3, .brand-name, .generate-btn, .template-chip {
 	font-family: Manrope, Inter, sans-serif;
@@ -275,13 +287,22 @@ input, select, textarea {
 	background: var(--input-bg);
 	color: var(--input-text);
 	font: inherit;
+	font-size: 16px;
 	transition: border-color 160ms ease, box-shadow 160ms ease;
+	-webkit-appearance: none;
+	appearance: none;
+}
+select {
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2364748B' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position: right 12px center;
+	padding-right: 40px;
 }
 input:focus, select:focus, textarea:focus {
 	border-color: var(--blue);
 	box-shadow: var(--focus);
 }
-textarea { height: 210px; resize: vertical; line-height: 1.55; }
+textarea { height: 210px; resize: vertical; line-height: 1.55; min-height: 160px; }
 .template-switch {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -562,17 +583,193 @@ body.mode-programming .tools-row { display: none; }
 	font-size: 13px;
 	font-weight: 500;
 }
-@media (max-width: 720px) {
-	.grid-2, .trust-row { grid-template-columns: 1fr 1fr; }
-	.container { padding: 20px; border-radius: 16px; }
-	.logo { width: 48px; height: 48px; border-radius: 12px; }
-	.main { padding-top: 20px; }
-	.history-item { flex-direction: column; align-items: flex-start; }
-	.history-actions { width: 100%; }
-	.history-item button { flex: 1; }
+.mobile-cta {
+	display: none;
 }
-@media (max-width: 480px) {
-	.trust-row { grid-template-columns: 1fr; }
+
+/* ----- Tablet ----- */
+@media (max-width: 900px) {
+	.trust-row { grid-template-columns: 1fr 1fr; }
+}
+
+/* ----- Mobile ----- */
+@media (max-width: 720px) {
+	.hero-header {
+		padding: 10px 14px;
+		padding-top: max(10px, env(safe-area-inset-top));
+		padding-left: max(14px, env(safe-area-inset-left));
+		padding-right: max(14px, env(safe-area-inset-right));
+	}
+	.hero-container { gap: 10px; }
+	.brand-section { gap: 10px; }
+	.logo { width: 44px; height: 44px; border-radius: 11px; }
+	.brand-name { font-size: 18px; }
+	.brand-text p {
+		font-size: 11px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		max-width: 52vw;
+	}
+
+	.main {
+		padding: 14px 12px calc(96px + env(safe-area-inset-bottom));
+		width: 100%;
+	}
+
+	.trust-row {
+		display: flex;
+		gap: 8px;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+		scrollbar-width: none;
+		margin: 0 0 14px;
+		padding-bottom: 2px;
+		max-width: 100%;
+	}
+	.trust-row::-webkit-scrollbar { display: none; }
+	.trust-item {
+		flex: 0 0 auto;
+		padding: 8px 12px;
+		font-size: 11px;
+		border-radius: 999px;
+		white-space: nowrap;
+		background: rgba(255,255,255,0.8);
+	}
+	html.dark .trust-item { background: rgba(15,23,42,0.7); }
+	.trust-item svg { width: 14px; height: 14px; }
+
+	.container {
+		padding: 16px;
+		border-radius: 18px;
+		max-width: 100%;
+	}
+
+	.grid-2 { grid-template-columns: 1fr; gap: 4px; }
+	label.field { margin-top: 12px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; }
+	.grid-2 > div:first-child label.field { margin-top: 4px; }
+
+	.template-switch {
+		gap: 6px;
+		padding: 5px;
+		margin-bottom: 10px;
+	}
+	.template-chip {
+		padding: 12px 8px;
+		font-size: 12px;
+		min-height: 48px;
+		gap: 6px;
+	}
+	.template-chip .chip-icon { width: 20px; height: 20px; font-size: 10px; }
+
+	textarea { height: 180px; font-size: 16px; }
+	body.mode-programming textarea[name="content"] {
+		height: 220px;
+		font-size: 13px;
+	}
+
+	.actions { display: none; }
+	.mobile-cta {
+		display: block;
+		position: fixed;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 50;
+		padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+		background: linear-gradient(180deg, transparent, var(--page-bg) 28%);
+		pointer-events: none;
+	}
+	.mobile-cta .generate-btn {
+		pointer-events: auto;
+		min-height: 52px;
+		border-radius: 14px;
+		font-size: 16px;
+		box-shadow: 0 12px 28px rgba(37,99,235,0.35);
+	}
+
+	.tools-row {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 8px;
+		margin-top: 12px;
+		margin-bottom: 4px;
+	}
+	.secondary-btn {
+		min-width: 0;
+		min-height: 44px;
+		padding: 11px 8px;
+		font-size: 12px;
+		border-radius: 10px;
+	}
+	body.mode-programming .tools-row { display: none; }
+
+	.meta-row { font-size: 11px; margin-top: 6px; }
+
+	.history { margin-top: 18px; padding-top: 14px; }
+	.history-item {
+		flex-direction: column;
+		align-items: stretch;
+		gap: 10px;
+		padding: 14px 0;
+	}
+	.history-actions { width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+	.history-item button {
+		min-height: 42px;
+		border-radius: 10px;
+		font-size: 13px;
+	}
+
+	.footer {
+		padding: 18px 14px calc(88px + env(safe-area-inset-bottom));
+		font-size: 12px;
+	}
+
+	#previewModal {
+		padding-top: env(safe-area-inset-top);
+	}
+	.modal-actions {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 8px;
+		padding: 12px;
+		padding-bottom: calc(12px + env(safe-area-inset-bottom));
+	}
+	.modal-actions button {
+		min-width: 0;
+		min-height: 48px;
+		font-size: 14px;
+		border-radius: 12px;
+	}
+
+	#toast {
+		left: 12px;
+		right: 12px;
+		bottom: calc(78px + env(safe-area-inset-bottom));
+		max-width: none;
+		text-align: center;
+		border-radius: 14px;
+	}
+
+	.progress-card {
+		width: min(92vw, 360px);
+		margin: 0 12px;
+	}
+}
+
+/* ----- Small phones ----- */
+@media (max-width: 380px) {
+	.brand-text p { display: none; }
+	.template-chip { font-size: 11px; padding: 11px 6px; }
+	.template-chip .chip-label-short { display: inline; }
+	.trust-item { font-size: 10px; padding: 7px 10px; }
+	.secondary-btn { font-size: 11px; }
+}
+
+/* Prefer less motion / lighter particles on small screens handled in JS */
+@media (prefers-reduced-motion: reduce) {
+	.container { animation: none; }
+	* { scroll-behavior: auto !important; }
 }
 </style>
 </head>
@@ -681,6 +878,10 @@ body.mode-programming .tools-row { display: none; }
 		</section>
 	</main>
 
+	<div class="mobile-cta" aria-hidden="false">
+		<button type="button" class="generate-btn" id="generateBtnMobile">Convert to PDF</button>
+	</div>
+
 	<footer class="footer" role="contentinfo">
 		<div class="footer-brand">
 			<img src="/images/codepdf-logo.png?v=10" width="28" height="28" alt="CodePDF">
@@ -733,10 +934,20 @@ document.querySelectorAll(".template-chip").forEach((chip) => {
 });
 
 document.getElementById("generateBtn").addEventListener("click", generatePDF);
+document.getElementById("generateBtnMobile").addEventListener("click", generatePDF);
 document.getElementById("smartBtn").addEventListener("click", () => runAi("smart-format"));
 document.getElementById("aiRewriteBtn").addEventListener("click", () => runAi("rewrite"));
 document.getElementById("aiSummaryBtn").addEventListener("click", () => runAi("summarize"));
 document.getElementById("aiExpandBtn").addEventListener("click", () => runAi("expand"));
+
+function setGenerateBusy(busy, label) {
+  ["generateBtn", "generateBtnMobile"].forEach((id) => {
+    const btn = document.getElementById(id);
+    if (!btn) return;
+    btn.disabled = busy;
+    btn.innerText = label;
+  });
+}
 
 function updateCounts() {
   const words = textarea.value.trim().split(/\s+/).filter(Boolean);
@@ -769,7 +980,7 @@ function applyTemplate(id) {
     fileNameInput.placeholder = "JAVA OOPS Notes";
     headingInput.placeholder = "Enter bold heading for the PDF";
   }
-  document.getElementById("generateBtn").innerText = "Convert to PDF";
+  setGenerateBusy(false, "Convert to PDF");
 }
 
 function setValue(name, value) {
@@ -811,14 +1022,12 @@ function hideProgress() {
 }
 
 async function generatePDF() {
-  const btn = document.getElementById("generateBtn");
   const payload = buildPayload();
   if (!payload.content.trim()) {
     showToast("Please enter some content first");
     return;
   }
-  btn.disabled = true;
-  btn.innerText = "Converting...";
+  setGenerateBusy(true, "Converting...");
   setProgress(5, "Queued");
   try {
     const start = await fetch("/api/generate/async", {
@@ -858,7 +1067,7 @@ async function generatePDF() {
     hideProgress();
     showToast(err.message || "Unable to convert to PDF");
   } finally {
-    btn.disabled = false;
+    setGenerateBusy(false, "Convert to PDF");
     applyTemplate(form.querySelector("[name='template']").value || "notes");
   }
 }
@@ -1058,13 +1267,18 @@ if ("serviceWorker" in navigator) {
 }
 
 function particlesOptions(isDark) {
+  const mobile = window.matchMedia("(max-width: 720px)").matches;
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduce) {
+    return { background: { color: { value: "transparent" } }, particles: { number: { value: 0 } } };
+  }
   return {
     background: { color: { value: "transparent" } },
     particles: {
-      number: { value: 24 },
+      number: { value: mobile ? 10 : 24 },
       color: { value: isDark ? ["#2563EB", "#8B5CF6", "#F8FAFC"] : ["#2563EB", "#8B5CF6", "#0F172A"] },
       size: { value: 2 },
-      move: { speed: 0.45 },
+      move: { speed: mobile ? 0.25 : 0.45 },
       opacity: { value: isDark ? 0.28 : 0.16 },
       links: { enable: false }
     }
@@ -1077,22 +1291,6 @@ function loadParticlesForTheme() {
 
 loadParticlesForTheme();
 window.addEventListener("themechange", loadParticlesForTheme);
-
-(function syncAbsoluteSeoUrls() {
-  const origin = window.location.origin;
-  const absolute = (path) => origin + path;
-  const pairs = [
-    ['link[rel="canonical"]', "href", "/"],
-    ['meta[property="og:url"]', "content", "/"],
-    ['meta[property="og:image"]', "content", "/images/og-image.png?v=11"],
-    ['meta[name="twitter:image"]', "content", "/images/og-image.png?v=11"],
-    ['link[rel="image_src"]', "href", "/images/og-image.png?v=11"]
-  ];
-  pairs.forEach(([selector, attr, path]) => {
-    const el = document.querySelector(selector);
-    if (el) el.setAttribute(attr, absolute(path));
-  });
-})();
 
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") closePreview();
